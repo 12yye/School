@@ -15,3 +15,8 @@ Welcome to the "school" repository! This is a centralized location for storing a
 This repository is dedicated to storing various school assignments, homework, and projects. It serves as a hub for collaboration among students and teachers, facilitating the sharing of knowledge and resources within the academic community.
 
 # Getting Started
+To get started with this repository, follow these steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Lionkk/school.git
