@@ -1,0 +1,41 @@
+Database
+	The system MUST maintain a record of all sign-in and sign-out events for each user, storing the data for a minimum of five (5) years.
+	The database MUST allow queries that filter access records by student ID, date, and specific time intervals.
+	The system MAY use a relational database (such as SQLite) to store student IDs, sign-in times, and sign-out times.
+	The system MUST ensure that the student ID is unique in the database and linked to the appropriate sign-in/sign-out logs.
+
+User Interface (UI)
+	The system MUST provide a graphical user interface (GUI) for both students and administrators.
+	The student-facing UI MUST allow students to sign in and out by entering a valid 9-digit student ID.
+	The admin-facing UI MUST enable authorized administrators to view and manage user access.
+	The admin interface MUST allow admins to activate, suspend, and reactivate student IDs with visual feedback.
+	The admin UI MUST provide functionality to view the entire history of sign-ins and sign-outs, with filtering options based on date, time, and student ID.
+	The GUI SHOULD provide clear, user-friendly error messages when a user tries to sign in with an invalid or suspended ID.
+
+Access Control
+	The system MUST require students to input their 9-digit student ID to log their sign-ins and sign-outs.
+	The system MUST ensure that only activated users are allowed to sign in/out.
+	The system MUST allow only authorized administrators to access the management features of the application.
+	The system MUST log each access attempt, recording the student ID, sign-in time, and sign-out time.
+	If a student ID is suspended, the system MUST prevent that user from signing in and display a notification indicating the suspension.
+
+Admin Functionality
+	The system MUST allow authorized admins to activate new student IDs and add first and last names associated with those IDs.
+	The system MUST allow authorized admins to suspend or reactivate existing users, with real-time updates to the student’s status.
+	The admin panel MUST provide filtering options to browse access logs by student ID, date range, and time range.
+	The admin panel MUST display the status of each user (e.g., active, suspended) and provide actions to modify the status.
+
+Data Validation
+	The system MUST validate that the student ID entered for sign-in/sign-out is exactly 9 digits long.
+	The system MUST reject sign-in or sign-out attempts with invalid, missing, or suspended student IDs, providing clear error messages.
+	The system MUST prevent duplication of records during sign-ins and sign-outs by ensuring that users cannot sign in or out multiple times without completing a full cycle.
+
+Future Extensibility
+	The system SHOULD be designed to accommodate additional user types in the future (e.g., faculty members, staff, and janitors).
+	The system SHALL be extensible to allow additional access control features, such as adding support for card readers or biometric authentication in the future.
+	The system SHALL allow for future modifications to integrate more detailed user profiles or additional user roles.
+
+Security
+	The system MUST restrict admin features, such as activating, suspending, or reactivating users, to only authorized personnel with admin login credentials.
+	The system MUST store admin credentials securely and validate login attempts before granting access to the admin panel.
+	The system MUST protect student data and ensure it cannot be tampered with or altered without proper authorization.
